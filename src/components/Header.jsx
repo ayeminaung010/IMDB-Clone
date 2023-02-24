@@ -2,6 +2,7 @@ import MenuItem from "./MenuItem";
 import {AiFillHome} from 'react-icons/ai'
 import {AiFillInfoCircle} from 'react-icons/ai'
 import Link from "next/link";
+import DarkModeSwitcher from "./DarkModeSwitcher";
 
 export default function Header() {
   return (
@@ -10,7 +11,8 @@ export default function Header() {
         <MenuItem title={'HOME'} address='/' Icon={AiFillHome} />
         <MenuItem title={'ABOUT'} address='/about' Icon={AiFillInfoCircle} />
       </div>
-      <div className="">
+      <div className=" flex items-center  space-x-5">
+        <DarkModeSwitcher/>
         <Link href='/'>
             <h2>
                 <span className=" bg-amber-500 text-bold  py-1 px-2 rounded-lg ">IMDB</span>
